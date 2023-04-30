@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ligue;
 use App\Models\Pays;
 
 class MainController extends Controller
 {
     public function index(){
-        $pays = Pays::all();
-        return view('welcome',compact('pays'));
+        $ligue = Ligue::all();
+        return view('welcome',compact('ligue'));
     }
 }
